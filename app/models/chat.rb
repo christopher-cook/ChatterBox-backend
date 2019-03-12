@@ -1,6 +1,6 @@
 class Chat
 
-DB = PG.connect({:host => "localhost", :port => 5432, :dbname => "final_dev"});
+DB = PG.connect({:host => "localhost", :port => 5432, :dbname => "final_dev"})
 
 def self.all
   results = DB.exec(
