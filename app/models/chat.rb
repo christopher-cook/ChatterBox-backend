@@ -19,7 +19,7 @@ def self.all
 end#all
 
 def self.find(id)
-  results + DB.exec(
+  results = DB.exec(
     <<-SQL
     SELECT *
     FROM chatter

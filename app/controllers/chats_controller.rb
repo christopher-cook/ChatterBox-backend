@@ -9,7 +9,7 @@ class ChatsController < ApplicationController
   end
 
   def create
-    render json: Chat.create(params["song"])
+    render json: Chat.create(params["chat"])
   end
 
   def delete
@@ -17,6 +17,6 @@ class ChatsController < ApplicationController
   end
 
   def update
-    render json: Chat.update(params["id"], params["song"])
+    render json: Chat.update(params["id"], params["chat"])
   end
 end
