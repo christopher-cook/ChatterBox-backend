@@ -32,4 +32,18 @@ def self.find(id)
   }
 end#find
 
+def self.create(opts)
+  results = DB.exec(
+    <<-SQL
+      INSERT INTO chatter (name, feed)
+      VALUES ('#{opts["name"]}', '#{opts["feed"]}')
+      RETURNING id, name, feed;
+    SQL
+  )
+  return {
+    "name" => results.first["name"],
+    "feed" => results.first["feed"]
+  }
+end#create
+
 end#class
