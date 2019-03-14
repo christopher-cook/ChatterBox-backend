@@ -6,15 +6,30 @@ def self.all
   results = DB.exec(
     <<-SQL
       SELECT *
-      FROM fuzzys;
+      FROM chatter;
     SQL
   )
   return results.map do |result|
       {
         "name" => result["name"],
-        "age" => result["age"].to_i,
-        "fav_color" => result["fav_color"]
+        "feed" => result["feed"].to_i,
+        "id" => result["id"].to_i
       }
-  end
- end
-end
+  end#map
+end#all
+
+def self.find(id)
+  results + DB.exec(
+    <<-SQL
+    SELECT *
+    FROM chatter
+    WHERE id=#{id};
+    SQL
+  )
+  return {
+    "name" => results.first["name"],
+    "feed" => results.first["feed"]
+  }
+end#find
+
+end#class
