@@ -56,7 +56,7 @@ def self.update(id, opts)
     <<-SQL
       UPDATE chatter
       SET name='#{opts["name"]}', feed='#{opts["feed"]}'
-      WHERE id =#{id}
+      WHERE id=#{id}
       RETURNING id, name, feed;
     SQL
   )
