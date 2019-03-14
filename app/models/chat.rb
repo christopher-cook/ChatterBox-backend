@@ -46,4 +46,9 @@ def self.create(opts)
   }
 end#create
 
+def self.delete(id)
+  results = DB.exec("DELETE FROM chatter WHERE id=#{id};")
+  return { "successfully deleted" => true }
+end#delete
+
 end#class
