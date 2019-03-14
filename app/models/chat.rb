@@ -12,7 +12,7 @@ def self.all
   return results.map do |result|
       {
         "name" => result["name"],
-        "feed" => result["feed"].to_i,
+        "feed" => result["feed"],
         "id" => result["id"].to_i
       }
   end#map
