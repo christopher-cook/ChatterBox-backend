@@ -51,4 +51,19 @@ def self.delete(id)
   return { "successfully deleted" => true }
 end#delete
 
+def self.update(id, opts)
+  results = DB.exec(
+    <<-SQL
+      UPDATE chatter
+      SET name='#{opts["name"]}', feed='#{opts["feed"]}'
+      WHERE id =#{id}
+      RETURNING name, feed;
+    SQL
+  )
+  return {
+    "name" => results.first["name"],
+    "feed" => results.first["feed"]
+  }
+end#update
+
 end#class
