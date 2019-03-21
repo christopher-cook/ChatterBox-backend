@@ -13,7 +13,7 @@
 
 <h2>Site Information</h2>
 <hr>
-<a href="http://68.132.86.66:3000/">ChatterBox API</a>
+<a href="http://68.132.86.66:3000/chats">ChatterBox API</a>
 
 <h4>Authors</h4>
 Christopher Cook
