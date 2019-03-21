@@ -1,7 +1,7 @@
 
 <h1>ChatterBox - API</h1>
 <hr>
-<p>This backend server was built and hosted on-site via Ubuntu Server 18.04 networked behind a Ubiquiti EdgeRouter.</p>
+<p>The backend server was built and hosted on-site via Ubuntu Server 18.04 and networked behind a Ubiquiti EdgeRouter.</p>
 <br />
 <h2>Technologies Implemented</h2>
 <hr>
@@ -14,6 +14,7 @@
 <h2>Site Information</h2>
 <hr>
 <a href="http://68.132.86.66:3000/chats">ChatterBox API</a>
+<a href="http://68.132.86.66:3001/">ChatterBox</a>
 
 <h4>Authors</h4>
 Christopher Cook
