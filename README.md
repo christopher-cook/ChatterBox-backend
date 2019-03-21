@@ -1,8 +1,7 @@
 
 <h1>ChatterBox - API</h1>
 <hr>
- <h2></h2>
-<p></p>
+<p>This backend server was built and hosted on-site via Ubuntu Server 18.04 networked behind a Ubiquiti EdgeRouter.</p>
 <br />
 <h2>Technologies Implemented</h2>
 <hr>
